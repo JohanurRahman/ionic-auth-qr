@@ -12,7 +12,13 @@ const routes: Routes = [
     path: '',
     redirectTo: '/auth',
     pathMatch: 'full'
+  },
+  {
+    path: 'tabs',
+    redirectTo: '/tabs/generator',
+    pathMatch: 'full'
   }
+
 ];
 
 @NgModule({

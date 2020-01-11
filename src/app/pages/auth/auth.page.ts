@@ -52,8 +52,7 @@ export class AuthPage implements OnInit {
     this.windowRef.confirmationResult
         .confirm(this.verificationCode)
         .then( (result) => {
-          console.log('verifies');
-          // this.router.navigate(['/', 'test']);
+          this.router.navigate(['/', 'tabs', 'generator']).then();
         })
         .catch( error => {
           alert('Incorrect Code Enter');

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Scan QR Code</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngIf="scannedCode">
+    <ion-card-content style="font-size: 17px">
+      <div style="padding-bottom: 30px">
+        <span style="color: blue; font-weight: bold">Result from scan</span>
+      </div>
+      <div >
+        <span>{{ scannedCode }}</span>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" shape="round" (click)="scanCode()" color="tertiary camera">
+    <span>Scan Code</span>
+  </ion-button>
+
+</ion-content>

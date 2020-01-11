@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import * as firebase from 'firebase';
+import {BarcodeScanner} from '@ionic-native/barcode-scanner/ngx';
 
 firebase.initializeApp({
   apiKey: 'AIzaSyBRzrvvV_LbHWquklbWnjVmqk9xt-edZQQ',
@@ -27,7 +28,8 @@ firebase.initializeApp({
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    BarcodeScanner
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Generate QR Code</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item style="padding-top: 16px;">
+    <ion-input type="text" placeholder="Type Something" [(ngModel)]="qrData" style="padding: 0"></ion-input>
+  </ion-item>
+
+  <ion-card class="ion-padding" *ngIf="qrData" text-center>
+    <ngx-qrcode [qrc-element-type]="elementType"
+                [qrc-value]="qrData"></ngx-qrcode>
+  </ion-card>
+
+</ion-content>

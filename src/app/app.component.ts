@@ -10,12 +10,20 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+
+  subscribe: any;
+
   constructor(
-    private platform: Platform,
-    private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+      private platform: Platform,
+      private splashScreen: SplashScreen,
+      private statusBar: StatusBar
   ) {
     this.initializeApp();
+    this.subscribe = this.platform.backButton.subscribeWithPriority(666666, () => {
+      if (this.constructor.name === 'TabsPage') {
+        navigator['app'].exitApp();
+      }
+    });
   }
 
   initializeApp() {
