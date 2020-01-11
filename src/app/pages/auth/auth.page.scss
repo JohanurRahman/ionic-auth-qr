@@ -1,0 +1,29 @@
+//.sc-ion-input-ios-h {
+//  border-bottom: 1.5px solid #d3d8e6;
+//}
+
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 1.5px solid #d3d8e6;
+  &:focus {
+    outline: none;
+  }
+}
+
+
+.signIn {
+  &__heading {
+    margin-bottom: 40px;
+  }
+
+  &__info {
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    margin-bottom: 30px;
+  }
+
+
+}

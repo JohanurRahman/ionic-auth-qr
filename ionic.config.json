@@ -1,5 +1,7 @@
 {
   "name": "ionic-auth-qr",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

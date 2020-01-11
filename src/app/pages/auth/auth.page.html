@@ -1,0 +1,39 @@
+<ion-content class="ion-padding">
+  <div >
+    <div class="signIn"  *ngIf="!windowRef.confirmationResult">
+      <h3 class="signIn__heading">Sign In with Your Phone Number</h3>
+
+      <div class="signIn__info">
+        <small>You will get a code via sms</small>
+      </div>
+
+      <div class="signIn__input">
+        <input type="text" placeholder="Enter phone number (ex: 01980000000)" [(ngModel)]="mobile" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="11">
+      </div>
+
+      <div class="signIn__input">
+        <ion-button expand="block" (click)="sendLoginCode()" color="danger" >Login</ion-button>
+      </div>
+    </div>
+
+    <div class="signIn" *ngIf="windowRef.confirmationResult">
+
+      <div class="signIn__info">
+        <small>Enter verification code</small>
+      </div>
+
+      <div class="signIn__input">
+        <input type="text" name="code" placeholder="Enter Code" [(ngModel)]="verificationCode" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="6">
+      </div>
+
+      <div>
+        <ion-button expand="block" (click)="verifyLoginCode()" color="tertiary" >Verify</ion-button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div id="recaptcha-container"></div>
+
+</ion-content>

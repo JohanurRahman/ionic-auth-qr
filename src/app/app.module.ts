@@ -8,6 +8,17 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import * as firebase from 'firebase';
+
+firebase.initializeApp({
+  apiKey: 'AIzaSyBRzrvvV_LbHWquklbWnjVmqk9xt-edZQQ',
+  authDomain: 'testauth-37471.firebaseapp.com',
+  databaseURL: 'https://testauth-37471.firebaseio.com',
+  projectId: 'testauth-37471',
+  storageBucket: 'testauth-37471.appspot.com',
+  messagingSenderId: '830728825053',
+  appId: '1:830728825053:web:ea845f2dfb1fedcef91334'
+});
 
 @NgModule({
   declarations: [AppComponent],
